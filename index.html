@@ -2,8 +2,12 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>AutoElite - Concessionario</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <title>AutoElite | Concessionario Auto Nuove e Usate</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -12,32 +16,42 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="auto.html">Le Nostre Auto</a></li>
             <li><a href="chi-siamo.html">Chi Siamo</a></li>
             <li><a href="contatti.html">Contatti</a></li>
+            <li><a href="veicoli-commerciali.html">Veicoli Commerciali</a></li>
+            <li><a href="utilitarie.html">Utilitarie</a></li>
         </ul>
     </nav>
 </header>
 
+<main>
+
 <section class="hero">
-    <h1>Trova l'auto dei tuoi sogni</h1>
-    <p>Qualità, affidabilità e convenienza</p>
+    <div class="container">
+        <h1>Trova l'auto dei tuoi sogni</h1>
+        <p>Qualità, affidabilità e convenienza</p>
+    </div>
 </section>
 
 <section class="auto-evidenza">
-    <h2>Auto in Evidenza</h2>
-    <div class="card">
-        <img src="img/auto1.jpg" alt="Auto">
-        <h3>BMW Serie 3</h3>
-        <p>€25.000</p>
-        <a href="dettagli-auto.html">Scopri di più</a>
+    <div class="container">
+        <h2>Auto in Evidenza</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="img/bmw-serie-3.jpg" alt="BMW Serie 3" class="card-img" loading="lazy">
+                <h3>BMW Serie 3</h3>
+                <p>€25.000</p>
+                <a href="dettagli-auto.html">Scopri di più</a>
+            </div>
+        </div>
     </div>
 </section>
+
+</main>
 
 <footer>
     <p>© 2026 AutoElite - Tutti i diritti riservati</p>
 </footer>
 
-<script src="js/script.js"></script>
 </body>
 </html>
