@@ -12,27 +12,21 @@
 <body>
 
 <header class="header">
-
-  <!-- checkbox per toggle menu -->
-  <input type="checkbox" id="menu-toggle" class="menu-toggle">
-
   <div class="header__content">
 
-    <a class="header__logo" href="index.html">
-      <strong>AutoElite</strong>
+    <!-- Logo a sinistra -->
+    <a class="header__logo" href="../index.html">
+    <img src="pagine/logo.png" alt="AutoElite Logo" class="logo-img">
     </a>
 
-    <!-- CHECKBOX NASCOSTO -->
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-
+    <!-- Menu centrato -->
     <ul class="header__menu">
-      <li><a href="index.html">Home</a></li>
       <li><a href="pagine/veicoli-commerciali.html">Veicoli Commerciali</a></li>
       <li><a href="pagine/utilitarie.html">Utilitarie</a></li>
     </ul>
 
+    <!-- Hamburger a destra -->
     <div class="header__quick">
-
       <label for="menu-toggle" class="icon-hamburger">
         <span></span>
         <span></span>
@@ -45,21 +39,31 @@
 
 <div class="spacer"></div>
 
-<div class="grid">
+<!-- <div class="grid">
   <div class="col-50">
     <h1>Trova l'auto dei tuoi sogni</h1>
     <p>Qualità, affidabilità e convenienza</p>
     <a href="#auto" class="button mt-2">Scopri le Auto</a>
   </div>
-</div>
+</div> -->
 
-<!-- <img src="img/sfondo concessionario.png" alt="concessionario"> -->
+<div class="grid mt-2">
+
+  <!-- Colonna sinistra: titolo e testo -->
+  <div class="col-50">
+    <h1>Trova l'auto dei tuoi sogni</h1>
+    <p>Qualità, affidabilità e convenienza</p>
+  </div>
+  <div class="col-50">
+    <img src="img/sfondo concessionario.png" alt="Auto in evidenza" class="home-feature">
+  </div>
+</div>
 
 
 <div id="chi-siamo" class="grid mt-2">
-  <div class="col-50">
+  <div class="col-100">
     <h2>Chi Siamo</h2>
-    <p>AutoElite è un concessionario con anni di esperienza nella vendita di auto nuove e usate. Offriamo assistenza, finanziamenti e garanzie dedicate per ogni vettura.</p>
+    <p>AutoElite è un concessionario con una lunga tradizione nel settore automobilistico, con anni di esperienza nella vendita di auto nuove, usate e veicoli commerciali. Ci impegniamo a offrire ai nostri clienti un servizio completo e personalizzato, che va dalla scelta del veicolo più adatto alle loro esigenze, fino al supporto post-vendita. Offriamo assistenza qualificata, finanziamenti su misura e garanzie dedicate per ogni vettura, garantendo sicurezza, affidabilità e tranquillità nell’acquisto. La nostra missione è mettere il cliente al centro, fornendo soluzioni flessibili e convenienti, accompagnandolo in ogni fase del percorso, dalla prima consulenza fino all’assistenza continua dopo la vendita. Con AutoElite scegliere un’auto significa scegliere qualità, professionalità e fiducia.</p>
   </div>
 </div>
 
@@ -67,13 +71,31 @@
   <div class="col-50">
     <h2>Contatti</h2>
     <p>Chiama il numero:</p>
-    <p><strong><a href="tel:+393517505962">+39 351 750 5962</a></strong></p>
+    <p><strong><a href="tel:+390123456789">+39 0123456789</a></strong></p>
     <p>Email: <a href="mailto:info@autoelite.example">info@autoelite.example</a></p>
   </div>
 </div>
 
-<footer class="text-center p-2">
+<div class="grid mt-3 text-center">
+  <div class="col-33">
+    <h3>Ampia Gamma</h3>
+    <p>Utilitarie e veicoli commerciali selezionati.</p>
+  </div>
+
+  <div class="col-33">
+    <h3>Finanziamenti a tasso 0</h3>
+    <p>Soluzioni personalizzate per ogni esigenza.</p>
+  </div>
+
+  <div class="col-33">
+    <h3>Garanzia & Fiducia</h3>
+    <p>Assistenza e supporto post-vendita.</p>
+  </div>
+</div>
+
+<footer class="text-center p-3">
   <p>© 2026 AutoElite - Tutti i diritti riservati</p>
+<span class="footeriva">P. IVA 01234567890</span>
 </footer>
 
 <script>
