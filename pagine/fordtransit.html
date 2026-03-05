@@ -1,35 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ford Transit</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-    <header class="header">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ford Transit - AutoElite</title>
 
-  <!-- checkbox per toggle menu -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="header">
   <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
   <div class="header__content">
 
-    <a class="header__logo" href="index.html">
+    <a class="header__logo" href="../index.html">
       <strong>AutoElite</strong>
     </a>
 
-    <!-- CHECKBOX NASCOSTO -->
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-
     <ul class="header__menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="pagine/veicoli-commerciali.html">Veicoli Commerciali</a></li>
-      <li><a href="pagine/utilitarie.html">Utilitarie</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="veicoli-commerciali.html">Veicoli Commerciali</a></li>
+      <li><a href="utilitarie.html">Utilitarie</a></li>
     </ul>
 
     <div class="header__quick">
-
       <label for="menu-toggle" class="icon-hamburger">
         <span></span>
         <span></span>
@@ -39,6 +36,58 @@
 
   </div>
 </header>
-    
+
+<div class="spacer"></div>
+
+<div class="grid">
+  <div class="col-50">
+    <h1>Ford Transit</h1>
+    <p>Capiente, robusto e perfetto per il lavoro.</p>
+    <p class="mt-1"><strong>Prezzo:</strong> €18.500</p>
+    <a href="veicoli-commerciali.html" class="button mt-2">Torna ai Veicoli Commerciali</a>
+  </div>
+
+  <div class="col-50">
+    <img src="../img/transit.jpg" alt="Ford Transit" class="img-res">
+  </div>
+</div>
+
+<div class="grid mt-2">
+  <div class="col-50">
+    <h2>Caratteristiche</h2>
+    <ul>
+      <li>Anno: 2018</li>
+      <li>Chilometraggio: 120.000 km</li>
+      <li>Motore: 2.0 diesel</li>
+      <li>Capacità carico: 8 m³</li>
+      <li>Colore: Bianco</li>
+    </ul>
+  </div>
+
+  <div class="col-50">
+    <h2>Descrizione</h2>
+    <p>Il Ford Transit è ideale per attività commerciali che richiedono spazio e affidabilità. Manutenzioni certificate e gomme sostituite di recente.</p>
+
+    <p class="mt-2"><strong>Contatti:</strong></p>
+    <p>Telefono: <a href="tel:+393517505962">+39 351 750 5962</a></p>
+    <p>Email: <a href="mailto:info@autoelite.example">info@autoelite.example</a></p>
+
+    <a href="mailto:info@autoelite.example?subject=Richiesta%20Ford%20Transit" class="button mt-2">Richiedi un Preventivo</a>
+  </div>
+</div>
+
+<footer class="text-center p-2 mt-4">
+  <p>© 2026 AutoElite - Tutti i diritti riservati</p>
+</footer>
+
+<script>
+  let item = document.querySelector('.icon-hamburger');
+  if (item) {
+    item.addEventListener("click", function() {
+      document.body.classList.toggle('menu-open');
+    });
+  }
+</script>
+
 </body>
 </html>
