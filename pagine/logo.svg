@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 240 64" role="img" aria-label="AutoElite logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff6a00" />
+      <stop offset="1" stop-color="#ffbe50" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="none" />
+  <text x="12" y="42" font-family="Poppins, Arial, Helvetica, sans-serif" font-weight="700" font-size="32" fill="url(#g)">AutoElite</text>
+</svg>
