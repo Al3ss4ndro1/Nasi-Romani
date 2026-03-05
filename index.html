@@ -1,74 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0f172a">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AutoElite | Concessionario Auto Nuove e Usate</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoElite</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
 
+<header class="header">
 
-<header>
-    <div class="logo">AutoElite</div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#chi-siamo">Chi Siamo</a></li>
-            <li><a href="#contatti">Contatti</a></li>
-            <li><a href="veicoli-commerciali.html">Veicoli Commerciali</a></li>
-            <li><a href="utilitarie.html">Utilitarie</a></li>
-        </ul>
-    </nav>
+  <!-- checkbox per toggle menu -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+  <div class="header__content">
+
+    <a class="header__logo" href="index.html">
+      <strong>AutoElite</strong>
+    </a>
+
+    <!-- CHECKBOX NASCOSTO -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <ul class="header__menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pagine/veicoli-commerciali.html">Veicoli Commerciali</a></li>
+      <li><a href="pagine/utilitarie.html">Utilitarie</a></li>
+    </ul>
+
+    <div class="header__quick">
+
+      <label for="menu-toggle" class="icon-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+  </div>
 </header>
 
-<main>
+<div class="spacer"></div>
 
-<section class="hero">
-    <div class="container">
-        <h1>Trova l'auto dei tuoi sogni</h1>
-        <p>Qualità, affidabilità e convenienza</p>
-    </div>
-</section>
+<div class="grid">
+  <div class="col-50">
+    <h1>Trova l'auto dei tuoi sogni</h1>
+    <p>Qualità, affidabilità e convenienza</p>
+    <a href="#auto" class="button mt-2">Scopri le Auto</a>
+  </div>
+</div>
 
-<section class="auto-evidenza">
-    <div class="container">
-        <h2>Auto in Evidenza</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="img/bmw-serie-3.jpg" alt="BMW Serie 3" class="card-img" loading="lazy">
-                <h3>BMW Serie 3</h3>
-                <p>€25.000</p>
-                <a href="dettagli-auto.html">Scopri di più</a>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- <img src="img/sfondo concessionario.png" alt="concessionario"> -->
 
-<!-- Sezioni informative nella parte bassa della Home (ancore) -->
-<section id="chi-siamo" class="section-list container">
+
+<div id="chi-siamo" class="grid mt-2">
+  <div class="col-50">
     <h2>Chi Siamo</h2>
     <p>AutoElite è un concessionario con anni di esperienza nella vendita di auto nuove e usate. Offriamo assistenza, finanziamenti e garanzie dedicate per ogni vettura.</p>
-</section>
+  </div>
+</div>
 
-<section id="contatti" class="section-list container">
+<div id="contatti" class="grid mt-4 mb-4">
+  <div class="col-50">
     <h2>Contatti</h2>
-    <p>Per informazioni o appuntamenti chiama il numero:</p>
+    <p>Chiama il numero:</p>
     <p><strong><a href="tel:+393517505962">+39 351 750 5962</a></strong></p>
-    <p>Oppure scrivici via email: <a href="mailto:info@autoelite.example">info@autoelite.example</a></p>
-</section>
+    <p>Email: <a href="mailto:info@autoelite.example">info@autoelite.example</a></p>
+  </div>
+</div>
 
-</main>
-
-<footer>
-    <p>© 2026 AutoElite - Tutti i diritti riservati</p>
+<footer class="text-center p-2">
+  <p>© 2026 AutoElite - Tutti i diritti riservati</p>
 </footer>
 
+<script>
+  let item = document.querySelector('.icon-hamburger');
+  item.addEventListener("click", function() {
+    document.body.classList.toggle('menu-open');
+  });
+</script>
 
 </body>
 </html>

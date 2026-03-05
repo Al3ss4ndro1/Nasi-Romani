@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veicoli Commerciali - AutoElite</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header__content">
+
+    <a class="header__logo" href="../index.html">
+      <strong>AutoElite</strong>
+    </a>
+
+    <ul class="header__menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="veicoli-commerciali.html">Veicoli Commerciali</a></li>
+      <li><a href="utilitarie.html">Utilitarie</a></li>
+    </ul>
+
+    <div class="header__quick">
+      <!-- HAMBURGER -->
+      <label for="menu-toggle" class="icon-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+  </div>
+</header>
+
+<div class="spacer"></div>
+
+<div class="grid">
+  <div class="col-50">
+    <h1>Veicoli Commerciali</h1>
+    <p>Scopri i nostri veicoli commerciali perfetti per lavoro e trasporto.</p>
+  </div>
+</div>
+
+<div class="grid mt-4">
+
+  <div class="col-33">
+    <img src="../img/transit.jpg" alt="Ford Transit" class="img-res">
+    <h3>Ford Transit</h3>
+    <p><strong>€18.500</strong></p>
+    <a href="fordtransit.html" class="button">Dettagli</a>
+  </div>
+
+  <div class="col-33">
+    <img src="../img/daily.jpg" alt="Iveco Daily" class="img-res">
+    <h3>Iveco Daily</h3>
+    <p><strong>€22.000</strong></p>
+    <a href="ivecodaily.html" class="button">Dettagli</a>
+  </div>
+
+</div> 
+
+<footer class="text-center p-2 mt-4">
+  <p>© 2026 AutoElite - Tutti i diritti riservati</p>
+</footer>
+
+<script>
+  let item = document.querySelector('.icon-hamburger');
+  item.addEventListener("click", function() {
+    document.body.classList.toggle('menu-open');
+  });
+</script>
+
+</body>
+</html>
