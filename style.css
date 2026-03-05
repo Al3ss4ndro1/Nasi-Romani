@@ -144,9 +144,9 @@ body.page-veicoli .header__menu a[href*="/veicoli-commerciali.html"] {
   display: none !important;
 }
 
-/* Sfondo tenue verde per le pagine delle utilitarie e veicoli commerciali */
+/* Sfondo tenue verde per le pagine delle utilitarie e veicoli commerciali - reso un po' più scuro e visibile */
 body.page-utilitarie, body.page-veicoli, body.page-veicoli-commerciali{
-  background-color: #eef7ef; /* verde molto tenue */
+  background-color: #cfead6; /* tonalità verde leggermente più scura e visibile */
 }
 
 /* Assicurati che le sezioni interne mantengano contrasto leggibile */
@@ -168,9 +168,9 @@ body.page-utilitarie .vehicle-card h3, body.page-veicoli .vehicle-card h3{
   color: #0f172a;
 }
 
-/* Su mobile manteniamo leggibilità */
+/* Su mobile manteniamo leggibilità con una variante leggermente più chiara */
 @media (max-width:768px){
-  body.page-utilitarie, body.page-veicoli{background-color:#f6f9f6}
+  body.page-utilitarie, body.page-veicoli{background-color:#e6f6ec}
 }
 
 @media (max-width:768px){
@@ -373,14 +373,14 @@ main, .grid{padding-top:80px}
   margin-left: auto;
   margin-right: auto;
   border-radius: 8px;
-  border: 1px solid rgba(2,6,23,0.04);
-  box-shadow: 0 8px 30px rgba(2,6,23,0.03);
+  border: 1px solid rgba(2,6,23,0.06);
+  box-shadow: 0 10px 36px rgba(2,6,23,0.05);
   background: #fff;
   padding: 8px;
 }
 
 /* Background chiaro e tenue per la home */
-body.home{background-color:#f7f8fa;}
+body.home{background-color:#e9eef3;} /* prima #f7f8fa */
 
 /* Linea sottile bianca sopra le sezioni informative */
 #chi-siamo, #contatti{
@@ -390,7 +390,7 @@ body.home{background-color:#f7f8fa;}
   max-width: 1100px;
   margin: 28px auto;
   padding: 22px 28px;
-  border-top: 1px solid rgba(2,6,23,0.06);
+  border-top: 1px solid rgba(2,6,23,0.08); /* era 0.06 */
 }
 
 /* Testo nelle sezioni mantenuto scuro e leggibile */
