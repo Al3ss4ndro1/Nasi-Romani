@@ -134,6 +134,16 @@ header, .header{
 .dropdown-menu a:hover{background:rgba(255,255,255,0.06)}
 .dropdown:hover .dropdown-menu{display:block}
 
+/* Nascondi nel menu il link corrispondente alla pagina corrente */
+body.page-utilitarie .header__menu a[href$="utilitarie.html"],
+body.page-utilitarie .header__menu a[href*="/utilitarie.html"] {
+  display: none !important;
+}
+body.page-veicoli .header__menu a[href$="veicoli-commerciali.html"],
+body.page-veicoli .header__menu a[href*="/veicoli-commerciali.html"] {
+  display: none !important;
+}
+
 @media (max-width:768px){
   .header__menu{
     position:absolute;
