@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peugeot Expert - AutoElite</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header__content">
+    <a class="header__logo" href="../index.html">
+      <img src="logo.svg" alt="AutoElite Logo" class="logo-img">
+    </a>
+
+    <ul class="header__menu">
+      <li><a href="../index.html" class="highlight">Home</a></li>
+      <li><a href="veicoli-commerciali.html" class="highlight">Veicoli Commerciali</a></li>
+      <li><a href="utilitarie.html" class="highlight">Utilitarie</a></li>
+    </ul>
+
+    <div class="header__quick">
+      <label for="menu-toggle" class="icon-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+  </div>
+</header>
+
+<div class="spacer"></div>
+<div class="grid">
+  <div class="col-100">
+    <a href="veicoli-commerciali.html" class="back-arrow">&#8592;</a>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="col-50">
+    <h1>Peugeot Expert</h1>
+    <p>Furgone versatile e affidabile, perfetto per il lavoro quotidiano.</p>
+    <p class="mt-1"><strong>Prezzo:</strong> €16.900</p>
+  </div>
+
+  <div class="col-50">
+    <img src="../img/expert.jpg" alt="Peugeot Expert" class="img-res">
+  </div>
+</div>
+
+<div class="grid mt-2">
+  <div class="col-50">
+    <h2>Caratteristiche</h2>
+    <ul>
+      <li>Anno: 2017</li>
+      <li>Chilometraggio: 110.000 km</li>
+      <li>Motore: 1.6 diesel</li>
+      <li>Colore: Bianco</li>
+      <li>Capacità carico: 6 m³</li>
+    </ul>
+  </div>
+
+  <div class="col-50">
+    <h2>Descrizione</h2>
+    <p>Il Peugeot Expert è un furgone affidabile e maneggevole, con ottime prestazioni per trasporto urbano e regionale.</p>
+
+    <p class="mt-2"><strong>Contatti:</strong></p>
+    <p>Telefono: <a href="tel:+393517505962">+39 351 750 5962</a></p>
+    <p>Email: <a href="mailto:info@autoelite.example">info@autoelite.example</a></p>
+
+    <a href="mailto:info@autoelite.example?subject=Richiesta%20Peugeot%20Expert" class="button mt-2">Richiedi un Preventivo</a>
+  </div>
+</div>
+
+<footer class="text-center p-2 mt-4">
+  <p>© 2026 AutoElite - Tutti i diritti riservati</p>
+</footer>
+
+<script>
+  let item = document.querySelector('.icon-hamburger');
+  if (item) { item.addEventListener("click", function() { document.body.classList.toggle('menu-open'); }); }
+</script>
+
+</body>
+</html>

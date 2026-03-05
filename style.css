@@ -100,7 +100,7 @@ header, .header{
 .header__menu li a {
   display: block;
   padding: 16px 10px;
-  color: var (--menu-color) !important;
+  color: rgba(255,255,255,0.92);
   text-decoration: none;
 }
 
@@ -142,6 +142,35 @@ body.page-utilitarie .header__menu a[href*="/utilitarie.html"] {
 body.page-veicoli .header__menu a[href$="veicoli-commerciali.html"],
 body.page-veicoli .header__menu a[href*="/veicoli-commerciali.html"] {
   display: none !important;
+}
+
+/* Sfondo tenue verde per le pagine delle utilitarie e veicoli commerciali */
+body.page-utilitarie, body.page-veicoli, body.page-veicoli-commerciali{
+  background-color: #eef7ef; /* verde molto tenue */
+}
+
+/* Assicurati che le sezioni interne mantengano contrasto leggibile */
+body.page-utilitarie .container, body.page-veicoli .container, body.page-veicoli-commerciali .container{
+  background: transparent;
+}
+
+/* Banner/box delle singole auto: sempre bianco, con ombra sottile */
+.card, .vehicle-card, .button-card{
+  background: #ffffff !important;
+  border-radius: 10px;
+  border: 1px solid rgba(2,6,23,0.04);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.04);
+}
+
+/* Se il testo era scuro su sfondo chiaro, assicuriamolo */
+body.page-utilitarie .card h3, body.page-veicoli .card h3,
+body.page-utilitarie .vehicle-card h3, body.page-veicoli .vehicle-card h3{
+  color: #0f172a;
+}
+
+/* Su mobile manteniamo leggibilità */
+@media (max-width:768px){
+  body.page-utilitarie, body.page-veicoli{background-color:#f6f9f6}
 }
 
 @media (max-width:768px){
@@ -191,6 +220,36 @@ h1{font-size:3rem;}
 h2{font-size:2rem;}
 h3{font-size:1.5rem;}
 
+/* Global responsive images */
+img, .img-res, .home-feature, .card-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fluid typography for headings */
+h1 { font-size: clamp(1.6rem, 3.5vw, 3rem); }
+h2 { font-size: clamp(1.25rem, 2.5vw, 2rem); }
+h3 { font-size: clamp(1rem, 2vw, 1.25rem); }
+
+/* Ensure buttons scale nicely on small screens */
+.button, .btn, .detail-btn { padding: clamp(8px, 1.6vw, 12px) clamp(10px, 2vw, 18px); font-size: clamp(0.85rem, 1.6vw, 1rem); }
+
+/* Card content should wrap and not overflow */
+.card, .vehicle-card { word-wrap: break-word; min-height: 1px; }
+
+/* Make container padding responsive */
+.container{ padding: 0 16px; }
+
+/* Mobile enhancements */
+@media (max-width: 768px){
+  .header__menu { flex-direction: column; gap: 8px; }
+  .header__content { padding: 8px 12px; }
+  .col-50, .col-33 { flex: 0 0 100%; }
+  .vehicle-footer { flex-direction: column; align-items: stretch; gap:10px }
+  .vehicle-footer .button, .vehicle-footer .detail-btn { margin-left: 0; width: 100%; text-align:center }
+}
+
 .button{
   font-size:1rem;
   text-transform:uppercase;
@@ -212,15 +271,30 @@ h3{font-size:1.5rem;}
 }
 .cover * {color:#fff}
 
+/* Layout a colonne con spaziatura minima uniforme */
 .grid{
   margin:0 auto;
   padding:0 10px;
   max-width:1250px;
   display:flex;
   flex-wrap:wrap;
+  gap:24px; /* distanza minima tra i box */
 }
+
+/* Colonne calcolate tenendo conto del gap per rimanere equidistanti */
+.col-33{flex:0 0 calc(33.333% - 16px); display:flex; flex-direction:column}
+.col-50{flex:0 0 calc(50% - 12px);}
+.col-100{flex:0 0 100%;}
+
+@media (max-width:768px){
+  .grid{gap:16px}
+  [class*='col-']{flex:0 0 100%;}
+}
+
 [class*='col-']{padding:0 10px;}
 
+/* Rimuovi margini inferiori sui singoli card perché il gap gestisce la distanza */
+.card, .vehicle-card{margin-bottom:0}
 
 .back-arrow {
   font-size: 2rem;
@@ -236,13 +310,6 @@ h3{font-size:1.5rem;}
   color: var(--accent);
   transform: translateX(-5px);
 }
-
-.col-33{width:33.33%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;}
-.col-50{width:50%;}
-.col-100{width:100%;}
 
 @media (max-width:768px){
   [class*='col-']{width:100%;}
@@ -306,4 +373,60 @@ main, .grid{padding-top:80px}
   margin-left: auto;
   margin-right: auto;
   border-radius: 8px;
+  border: 1px solid rgba(2,6,23,0.04);
+  box-shadow: 0 8px 30px rgba(2,6,23,0.03);
+  background: #fff;
+  padding: 8px;
 }
+
+/* Background chiaro e tenue per la home */
+body.home{background-color:#f7f8fa;}
+
+/* Linea sottile bianca sopra le sezioni informative */
+#chi-siamo, #contatti{
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.03);
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 22px 28px;
+  border-top: 1px solid rgba(2,6,23,0.06);
+}
+
+/* Testo nelle sezioni mantenuto scuro e leggibile */
+#chi-siamo p, #contatti p{color: #0f172a; line-height:1.6}
+
+/* Separatore sottile tra sezioni e resto del contenuto */
+.section-separator{height:1px;background:linear-gradient(90deg, rgba(2,6,23,0.04), rgba(2,6,23,0.02));margin:18px 0}
+
+/* Box bianco che contiene prezzo e pulsante nei card */
+.card, .vehicle-card{
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+.card-footer, .vehicle-footer{
+  background: #ffffff;
+  padding: 12px 14px;
+  border-top: 1px solid rgba(2,6,23,0.04);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+.card-footer .price, .vehicle-footer .price{
+  margin:0;
+  font-weight:700;
+  color:#0f172a;
+}
+
+/* Assicura che il pulsante stia a destra e sia evidente */
+.card-footer .detail-btn, .vehicle-footer .button, .vehicle-footer .detail-btn{
+  margin-left:auto;
+}
+
+/* arrotonda il fondo della card per continuità estetica */
+.card{border-radius:12px}
+.card-footer{border-radius:0 0 12px 12px}
