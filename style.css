@@ -151,7 +151,6 @@ footer{background:transparent;text-align:center;padding:36px 0;color:var(--muted
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-<<<<<<< HEAD
     /* Header stacks on small screens */
     header {
         flex-direction: column;
@@ -173,7 +172,6 @@ footer{background:transparent;text-align:center;padding:36px 0;color:var(--muted
     .card{
         width:100%;
         max-width:420px;
-=======
 
     header {
         flex-direction: column;
@@ -193,6 +191,5 @@ footer{background:transparent;text-align:center;padding:36px 0;color:var(--muted
     .card {
         width: 100%;
         max-width: 420px;
->>>>>>> e3dcc1e9b3f4d34dc0af0fb8e0a98ca9a8c994f1
     }
 }
