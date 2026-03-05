@@ -10,27 +10,24 @@ body, html{
 
 .header__logo img.logo-img {
   height: 100px;
-  width: auto;   /* mantiene le proporzioni */
+  width: auto;
   display: block;
 }
 
 .section-offset {
-  padding-top: 100px;   /* spazio sopra la sezione */
-  margin-top: -80px;    /* compensa l’header fisso */
+  padding-top: 100px;
+  margin-top: -80px;
 }
 
-/* Solo per l'immagine “home-feature” */
-.home-feature {
-  width: 100%;        /* occupa tutta la colonna */
-  max-width: 500px;   /* limita la larghezza su desktop */
-  height: auto;       /* mantiene proporzioni */
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   display: block;
-  margin-left: auto;  /* centra se più piccola della colonna */
+  margin-left: auto;
   margin-right: auto;
-  border-radius: 8px; /* opzionale */
-}
+  border-radius: 8px;
 
-/* Mobile: immagine più piccola, colonna sopra-sotto */
+
 @media (max-width: 768px) {
   .home-feature { max-width: 100%; }
   .grid .col-50 { width: 100%; margin-bottom: 20px; }
@@ -73,28 +70,25 @@ a {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  position: relative; /* importante se useremo absolute per centrare */
+  position: relative;
 }
 
-/* Logo a sinistra */
 .header__logo {
-  flex: 1; /* occupa spazio a sinistra */
+  flex: 1;
 }
 
-/* Menu centrato */
 .header__menu {
-  flex: 1; /* occupa spazio centrale */
+  flex: 1;
   display: flex;
-  justify-content: center; /* centra le voci */
-  gap: 20px; /* distanza tra le voci */
+  justify-content: center;
+  gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Le singole voci restano cliccabili */
 .header__menu li {
-  display: inline-block; /* fondamentale per il click */
+  display: inline-block;
 }
 
 .header__menu li a {
@@ -104,12 +98,10 @@ a {
   text-decoration: none;
 }
 
-/* Hover effetto */
 .header__menu li a:hover {
   color: var(--accent);
 }
 
-/* Hamburger a destra */
 .header__quick {
   flex: 1;
   display: flex;
